@@ -1,6 +1,6 @@
 {
     "name": "Prometheus Node Exporter",
-    "version": "1.0-beta1",
+    "version": "1.0-beta2",
     "slug": "node_exporter",
     "description": "Prometheus Node Exporter",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
