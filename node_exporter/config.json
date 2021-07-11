@@ -1,0 +1,25 @@
+{
+    "name": "Prometheus Node Exporter",
+    "version": "1.0-beta1",
+    "slug": "node_exporter",
+    "description": "Prometheus Node Exporter",
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "startup": "application",
+    "boot": "auto",
+    "options": {},
+    "schema": {},
+    "ports": {
+      "9100/tcp": 9100
+    },
+    "ports_description": {
+      "9100/tcp": "Node Exporter metrics endpoint"
+    },
+    "map": ["addons", "backup", "config:rw", "share", "ssl", "media"],
+    "hassio_api": true,
+    "auth_api": true,
+    "docker_api": true,
+    "host_network": true,
+    "host_pid": true,
+    "apparmor": false,
+    "full_access": true
+  }

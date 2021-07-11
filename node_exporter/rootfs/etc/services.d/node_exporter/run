@@ -1,0 +1,33 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Home Assistant Community Add-on: Prometheus Node Exporter
+# Runs Prometheus Node Exporter
+# ==============================================================================
+declare -a options
+
+bashio::log.info 'Starting Prometheus Node Exporter...'
+
+options+=(--collector.cpu)
+options+=(--collector.diskstats)
+options+=(--collector.filesystem)
+options+=(--collector.loadavg)
+options+=(--collector.meminfo)
+options+=(--collector.filefd)
+options+=(--collector.netdev)
+options+=(--collector.stat)
+options+=(--collector.netstat)
+options+=(--collector.systemd)
+options+=(--collector.uname)
+options+=(--collector.vmstat)
+options+=(--collector.time)
+options+=(--collector.mdadm)
+options+=(--collector.zfs)
+options+=(--collector.tcpstat)
+options+=(--collector.bonding)
+options+=(--collector.hwmon)
+options+=(--collector.arp)
+options+=(--web.listen-address=:9100)
+options+=(--web.telemetry-path="/metrics")
+
+# Run Node Exporter
+exec node_exporter "${options[@]}"
